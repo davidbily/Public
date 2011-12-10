@@ -1,3 +1,8 @@
+/*
+ * @param {string} Element ID
+ * @param {number} Interval in miliseconds
+ * @param {number} Duration in miliseconds
+ */
 var HeaderSlider = function(element_id, interval, duration)
 {
 	this.element = $('#' + element_id);
@@ -6,6 +11,9 @@ var HeaderSlider = function(element_id, interval, duration)
 	this.timer;
 }
 
+/*
+ * @public
+ */
 HeaderSlider.prototype.init = function()
 {
 	if(this.element.find('.slides').length > 1)
@@ -43,12 +51,18 @@ HeaderSlider.prototype.init = function()
 	}
 };
 
+/*
+ * @private
+ */
 HeaderSlider.prototype.getNextSlide = function()
 {
 	return this.visible_slide.next('.slides').length ?
 		this.visible_slide.next('.slides') : this.element.find('.slides:first');
 }
 
+/*
+ * @private
+ */
 HeaderSlider.prototype.slide = function(next_slide)
 {
 	if(this.visible_slide.is(':not(:animated)'))
@@ -70,6 +84,9 @@ HeaderSlider.prototype.slide = function(next_slide)
 	}
 }
 
+/*
+ * @private
+ */
 HeaderSlider.prototype.setTimer = function()
 {
 	if(!this.stopped)

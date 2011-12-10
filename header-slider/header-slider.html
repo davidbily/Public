@@ -1,0 +1,38 @@
+<html>
+
+	<head>
+		<title>Header slider demo</title>
+		<script src="../jquery.js"></script>
+		<script src="header-slider.js"></script>
+		<style>
+			#slider { 
+				width: 728px; 
+				height: 90px;
+				border: 10px solid #eee; 
+			}
+			#slider .slides {
+				width: 100%;
+				height: 100%;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div id="slider">
+			<div class="slides">
+				<a href="#"><img src="images/banner_1.jpg" alt="Banner 1" /></a>
+			</div>
+			<div class="slides">
+				<a href="#"><img src="images/banner_2.jpg" alt="Banner 2" /></a>
+			</div>
+		</div>
+
+		<script>
+			var slider = new HeaderSlider('slider', 2000, 900);
+			slider.init();
+		</script>
+
+	</body>
+
+</html>

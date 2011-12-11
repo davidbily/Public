@@ -6,7 +6,7 @@
 var HeaderSlider = function(element_id, interval, duration)
 {
 	this.element = $('#' + element_id);
-	this.interval = interval || 5000;
+	this.interval = interval || 4000;
 	this.duration = duration || 600;
 }
 

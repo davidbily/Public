@@ -1,14 +1,13 @@
 /*
  * @param {string} Element ID
- * @param {number} Interval in miliseconds
- * @param {number} Duration in miliseconds
+ * @param {number} Interval in miliseconds (optional)
+ * @param {number} Duration in miliseconds (optional)
  */
 var HeaderSlider = function(element_id, interval, duration)
 {
 	this.element = $('#' + element_id);
-	this.interval = interval;
-	this.duration = duration;
-	this.timer;
+	this.interval = interval || 5000;
+	this.duration = duration || 600;
 }
 
 /*
